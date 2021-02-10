@@ -1,12 +1,10 @@
-# Technical-Documentation-Page
 <nav id="navbar">
   <header>JS Documentation</header>
   <ul>
     <li><a class="nav-link" href="#Introduction">Introduction</a></li>
     <li>
       <a class="nav-link" href="#What_you_should_already_know"
-        >What you should already know</a
-      >
+        >What you should already know</a>
     </li>
     <li>
       <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a>
@@ -26,8 +24,7 @@
     <li><a class="nav-link" href="#while_statement">while statement</a></li>
     <li>
       <a class="nav-link" href="#Function_declarations"
-        >Function declarations</a
-      >
+        >Function declarations</a>
     </li>
     <li><a class="nav-link" href="#Reference">Reference</a></li>
   </ul>
@@ -42,8 +39,8 @@
         example, a web browser), JavaScript can be connected to the objects of
         its environment to provide programmatic control over them.
       </p>
-      >
-      <p>
+
+   <p>
         JavaScript contains a standard library of objects, such as Array, Date,
         and Math, and a core set of language elements such as operators, control
         structures, and statements. Core JavaScript can be extended for a
@@ -72,8 +69,8 @@
     <header>What you should already know</header>
     <article>
       <p>This guide assumes you have the following basic background:</p>
-      >
-      <ul>
+
+ <ul>
         <li>
           A general understanding of the Internet and the World Wide Web (WWW).
         </li>
@@ -96,8 +93,7 @@
         constructs which was the reason why it was renamed from LiveScript to
         JavaScript.
       </p>
-      >
-      <p>
+<p>
         In contrast to Java's compile-time system of classes built by
         declarations, JavaScript supports a runtime system based on a small
         number of data types representing numeric, Boolean, and string values.
@@ -126,8 +122,8 @@
         >function greetMe(yourName) { alert("Hello " + yourName); }
         greetMe("World");
       </code>
-       >
-      Select the code in the pad and hit Ctrl+R to watch it unfold in your
+
+ Select the code in the pad and hit Ctrl+R to watch it unfold in your
       browser!
     </article>
   </section>
@@ -180,8 +176,8 @@
         called a local variable, because it is available only within that
         function.
       </p>
-      >
-      <p>
+
+ <p>
         JavaScript before ECMAScript 2015 does not have block statement scope;
         rather, a variable declared within a block is local to the function (or
         global scope) that the block resides within. For example the following
@@ -194,11 +190,10 @@
         This behavior changes, when using the let declaration introduced in
         ECMAScript 2015.
       </p>
-      >
-      <code
+
+<code>
         >if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
-        defined</code
-      >
+        defined</code>
     </article>
   </section>
   <section class="main-section" id="Global_variables">
@@ -209,8 +204,8 @@
         pages the global object is window, so you can set and access global
         variables using the window.variable syntax.
       </p>
-      >
-      <p>
+
+<p>
         Consequently, you can access global variables declared in one window or
         frame from another window or frame by specifying the window or frame
         name. For example, if a variable called phoneNumber is declared in a
@@ -228,34 +223,31 @@
         identifier: it must start with a letter, underscore or dollar sign and
         can contain alphabetic, numeric, or underscore characters.
       </p>
-      >
-      <code>const PI = 3.14;</code>
+
+ <code>const PI = 3.14;</code>
       <p>
         A constant cannot change value through assignment or be re-declared
         while the script is running. It has to be initialized to a value.
       </p>
-      >
-      <p>
+ <p>
         The scope rules for constants are the same as those for let block scope
         variables. If the const keyword is omitted, the identifier is assumed to
         represent a variable.
       </p>
-      >
-      <p>
+
+  <p>
         You cannot declare a constant with the same name as a function or
         variable in the same scope. For example:
       </p>
->
-      <code
+
+ <code
         >// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
         CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
-        }</code
-      >
+        }</code>
       However, object attributes are not protected, so the following statement
       is executed without problems.
       <code
-        >const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code
-      >
+        >const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code >
     </article>
   </section>
   <section class="main-section" id="Data_types">
@@ -281,8 +273,8 @@
             </li>
           </ul>
         </li>
->
-        <li>and Object</li>
+
+   <li>and Object</li>
       </ul>
       Although these data types are a relatively small amount, they enable you
       to perform useful functions with your applications. Objects and functions
@@ -297,8 +289,8 @@
       Use the if statement to execute a statement if a logical condition is
       true. Use the optional else clause to execute a statement if the condition
       is false. An if statement looks as follows:
->
-      <code>if (condition) { statement_1; } else { statement_2; }</code>
+
+ <code>if (condition) { statement_1; } else { statement_2; }</code>
       condition can be any expression that evaluates to true or false. See
       Boolean for an explanation of what evaluates to true and false. If
       condition evaluates to true, statement_1 is executed; otherwise,
@@ -316,21 +308,20 @@
       evaluates to true will be executed. To execute multiple statements, group
       them within a block statement ({ ... }) . In general, it's good practice
       to always use block statements, especially when nesting if statements:
->
-      <code
+
+ <code
         >if (condition) { statement_1_runs_if_condition_is_true;
         statement_2_runs_if_condition_is_true; } else {
         statement_3_runs_if_condition_is_false;
-        statement_4_runs_if_condition_is_false; }</code
-      >
+        statement_4_runs_if_condition_is_false; }</code>
       It is advisable to not use simple assignments in a conditional expression,
       because the assignment can be confused with equality when glancing over
       the code. For example, do not use the following code:
       <code>if (x = y) { /* statements here */ }</code> If you need to use an
       assignment in a conditional expression, a common practice is to put
       additional parentheses around the assignment. For example:
->
-      <code>if ((x = y)) { /* statements here */ }</code>
+
+ <code>if ((x = y)) { /* statements here */ }</code>
     </article>
   </section>
   <section class="main-section" id="while_statement">
@@ -338,34 +329,33 @@
     <article>
       A while statement executes its statements as long as a specified condition
       evaluates to true. A while statement looks as follows:
->
-      <code>while (condition) statement</code> If the condition becomes false,
+
+  <code>while (condition) statement</code> If the condition becomes false,
       statement within the loop stops executing and control passes to the
       statement following the loop.
->
-      <p>
+
+  <p>
         The condition test occurs before statement in the loop is executed. If
         the condition returns true, statement is executed and the condition is
         tested again. If the condition returns false, execution stops and
         control is passed to the statement following while.
       </p>
->
-      <p>
+
+   <p>
         To execute multiple statements, use a block statement ({ ... }) to group
         those statements.
       </p>
->
-      Example:
->
-      <p>The following while loop iterates as long as n is less than three:</p>
->
-      <code>var n = 0; var x = 0; while (n &lt; 3) { n++; x += n; }</code>
+ Example:
+
+  <p>The following while loop iterates as long as n is less than three:</p>
+
+<code>var n = 0; var x = 0; while (n &lt; 3) { n++; x += n; }</code>
       <p>
         With each iteration, the loop increments n and adds that value to x.
         Therefore, x and n take on the following values:
       </p>
->
-      <ul>
+
+ <ul>
         <li>After the first pass: n = 1 and x = 1</li>
         <li>After the second pass: n = 2 and x = 3</li>
         <li>After the third pass: n = 3 and x = 6</li>
@@ -381,8 +371,8 @@
     <article>
       A function definition (also called a function declaration, or function
       statement) consists of the function keyword, followed by:
->
-      <ul>
+
+ <ul>
         <li>The name of the function.</li>
         <li>
           A list of arguments to the function, enclosed in parentheses and
@@ -396,8 +386,8 @@
       <p>
         For example, the following code defines a simple function named square:
       </p>
->
-      <code>function square(number) { return number * number; }</code>
+
+ <code>function square(number) { return number * number; }</code>
       <p>
         The function square takes one argument, called number. The function
         consists of one statement that says to return the argument of the
@@ -422,8 +412,7 @@
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
             target="_blank"
-            >MDN</a
-          />
+            >MDN</a>
         </li>
       </ul>
     </article>
